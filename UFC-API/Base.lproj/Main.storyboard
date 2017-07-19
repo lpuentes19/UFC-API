@@ -35,6 +35,12 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="179.5" height="196.5"/>
                                                         </imageView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="9s3-Ao-EGb" secondAttribute="bottom" id="GAm-tv-fZ0"/>
+                                                        <constraint firstItem="9s3-Ao-EGb" firstAttribute="leading" secondItem="5jN-Gl-dHr" secondAttribute="leading" id="XA5-wI-wIN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9s3-Ao-EGb" secondAttribute="trailing" id="fxT-Hw-DZM"/>
+                                                        <constraint firstItem="9s3-Ao-EGb" firstAttribute="top" secondItem="5jN-Gl-dHr" secondAttribute="top" id="juU-G0-Xzf"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="4LG-ZK-wUb">
                                                     <rect key="frame" x="179.5" y="0.0" width="179.5" height="196.5"/>
@@ -60,6 +66,12 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4LG-ZK-wUb" secondAttribute="trailing" id="0Yz-QB-99f"/>
+                                                <constraint firstItem="4LG-ZK-wUb" firstAttribute="top" secondItem="VLf-9W-gcF" secondAttribute="top" id="OBH-zQ-mhf"/>
+                                                <constraint firstItem="4LG-ZK-wUb" firstAttribute="leading" secondItem="5jN-Gl-dHr" secondAttribute="trailing" id="VWP-Om-KUy"/>
+                                                <constraint firstAttribute="bottom" secondItem="4LG-ZK-wUb" secondAttribute="bottom" id="VZT-zs-NbN"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
