@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UFCFighter {
+struct UFCFighter {
     
     var firstName: String?
     var lastName: String?
@@ -17,7 +17,10 @@ class UFCFighter {
     var weightClass: String?
     var imageURL: String?
     
-    var fullName: String? {
-        return "\(firstName) \(lastName)"
+    var fullName: String {
+        guard let first = firstName,
+            let last = lastName else { return "No name" }
+        
+        return "\(String(describing: first)) \(String(describing: last))"
     }
 }
