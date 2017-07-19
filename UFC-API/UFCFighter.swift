@@ -10,24 +10,14 @@ import Foundation
 
 class UFCFighter {
     
-    let firstName: String
-    let lastName: String
-    let wins: Int
-    let losses: Int
-    let weightClass: String
-    let imageURL: String
+    var firstName: String?
+    var lastName: String?
+    var wins: Int?
+    var losses: Int?
+    var weightClass: String?
+    var imageURL: String?
     
-    var fullName: String {
+    var fullName: String? {
         return "\(firstName) \(lastName)"
-    }
-    
-    init(firstName: String, lastName: String, wins: Int, losses: Int, weightClass: String, imageURL: String) {
-        
-        self.firstName = firstName
-        self.lastName = lastName
-        self.wins = wins
-        self.losses = losses
-        self.weightClass = weightClass
-        self.imageURL = imageURL
     }
 }

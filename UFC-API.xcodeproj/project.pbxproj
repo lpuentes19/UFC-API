@@ -13,6 +13,7 @@
 		95EC884D1F1E83E3006530FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EC884B1F1E83E3006530FD /* LaunchScreen.storyboard */; };
 		95EC88561F1E9292006530FD /* UFCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC88551F1E9292006530FD /* UFCTableViewController.swift */; };
 		95EC88581F1E94F6006530FD /* UFCFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC88571F1E94F6006530FD /* UFCFighter.swift */; };
+		95EC885C1F1EF670006530FD /* UFCFighterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC885B1F1EF670006530FD /* UFCFighterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		95EC884E1F1E83E3006530FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95EC88551F1E9292006530FD /* UFCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UFCTableViewController.swift; sourceTree = "<group>"; };
 		95EC88571F1E94F6006530FD /* UFCFighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UFCFighter.swift; sourceTree = "<group>"; };
+		95EC885B1F1EF670006530FD /* UFCFighterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UFCFighterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				95EC88461F1E83E3006530FD /* Main.storyboard */,
 				95EC88551F1E9292006530FD /* UFCTableViewController.swift */,
 				95EC88571F1E94F6006530FD /* UFCFighter.swift */,
+				95EC885B1F1EF670006530FD /* UFCFighterTableViewCell.swift */,
 				95EC88541F1E83FD006530FD /* Resources */,
 			);
 			path = "UFC-API";
@@ -150,6 +153,7 @@
 			files = (
 				95EC88561F1E9292006530FD /* UFCTableViewController.swift in Sources */,
 				95EC88581F1E94F6006530FD /* UFCFighter.swift in Sources */,
+				95EC885C1F1EF670006530FD /* UFCFighterTableViewCell.swift in Sources */,
 				95EC88431F1E83E3006530FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
