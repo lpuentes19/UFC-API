@@ -12,9 +12,15 @@ class UFCFighterTableViewCell: UITableViewCell {
 
     var fighter: UFCFighter? {
         didSet {
-            self.nameLabel.text = self.fighter?.fullName
-            self.weightClassLabel.text = self.fighter?.weightClass
-            self.recordLabel.text = "Wins: \(String(describing: self.fighter?.wins)) - Losses: \(String(describing: self.fighter?.losses))"
+            
+            guard let fullName = fighter?.fullName,
+                let weightClass = fighter?.weightClass,
+                let wins = fighter?.wins,
+                let losses = fighter?.losses else { return }
+            
+            self.nameLabel.text = fullName
+            self.weightClassLabel.text = weightClass
+            self.recordLabel.text = "Wins: \(String(describing: wins)) - Losses: \(String(describing: losses))"
             self.setupThumbnailImage()
         }
     }

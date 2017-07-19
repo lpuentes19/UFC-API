@@ -10,7 +10,7 @@ import UIKit
 
 class UFCTableViewController: UITableViewController {
 
-    var fightersArray: [UFCFighter]?
+    var fightersArray: [UFCFighter] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +24,14 @@ class UFCTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fightersArray?.count ?? 0
+        return fightersArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "fighterCell", for: indexPath) as? UFCFighterTableViewCell else { return UITableViewCell() }
         
-        cell.fighter = fightersArray?[indexPath.row]
+        cell.fighter = fightersArray[indexPath.row]
         
         return cell
     }
@@ -52,18 +52,15 @@ class UFCTableViewController: UITableViewController {
                     
                     for dictionary in json as! [[String: Any]] {
                         
-                        let fighters = UFCFighter()
+                        var fighters = UFCFighter()
                         fighters.firstName = dictionary["first_name"] as? String
                         fighters.lastName = dictionary["last_name"] as? String
                         fighters.weightClass = dictionary["weight_class"] as? String
                         fighters.wins = dictionary["wins"] as? Int
                         fighters.losses = dictionary["losses"] as? Int
                         fighters.imageURL = dictionary["thumbnail"] as? String
-                        self.fightersArray?.append(fighters)
-                        completion(self.fightersArray)
-                        self.tableView.reloadData()
-                        
-                        print(fighters)
+                        self.fightersArray.append(fighters)
+                        completion(self.fightersArray)                        
                     }
                     
                 } catch {
