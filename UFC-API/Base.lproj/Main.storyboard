@@ -12,13 +12,13 @@
         <!--UFC Fighters-->
         <scene sceneID="dFF-NQ-6vs">
             <objects>
-                <tableViewController id="vxG-wL-RhP" sceneMemberID="viewController">
+                <tableViewController id="vxG-wL-RhP" customClass="UFCTableViewController" customModule="UFC_API" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="213" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gcl-fh-8Ng">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="213" id="s04-bc-D5W">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fighterCell" rowHeight="213" id="s04-bc-D5W" customClass="UFCFighterTableViewCell" customModule="UFC_API" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="213"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s04-bc-D5W" id="5wQ-h9-u23">
@@ -45,7 +45,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Division" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uko-JX-7Xg">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Weight Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uko-JX-7Xg">
                                                             <rect key="frame" x="0.0" y="87.5" width="179.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -69,6 +69,12 @@
                                         <constraint firstAttribute="bottom" secondItem="VLf-9W-gcF" secondAttribute="bottom" constant="8" id="uEe-6v-0cE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fighterImage" destination="9s3-Ao-EGb" id="4HZ-GI-eFZ"/>
+                                    <outlet property="nameLabel" destination="bph-dI-jM5" id="4cx-ix-cJ9"/>
+                                    <outlet property="recordLabel" destination="2TZ-Gf-BiK" id="fIw-GF-Qfe"/>
+                                    <outlet property="weightClassLabel" destination="uko-JX-7Xg" id="voK-ig-CfY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
