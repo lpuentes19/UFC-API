@@ -25,16 +25,30 @@ class UFCFighterTableViewCell: UITableViewCell {
         }
     }
     
+    let cacheImage = NSCache<AnyObject, AnyObject>()
+    
     func setupThumbnailImage() {
         if let thumbnailImageURL = fighter?.imageURL {
             guard let url = URL(string: thumbnailImageURL) else { return }
+            
+            if let imageFromCache = cacheImage.object(forKey: thumbnailImageURL as AnyObject) as? UIImage {
+                self.fighterImage.image = imageFromCache
+                return
+            }
+            
             let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
                 if error != nil {
                     print(error!.localizedDescription)
                 }
                 guard let data = data else { return }
                 DispatchQueue.main.async {
-                    self.fighterImage.image = UIImage(data: data)
+                    guard let imageToCache = UIImage(data: data) else { return }
+                    
+                    self.cacheImage.setObject(imageToCache, forKey: thumbnailImageURL as AnyObject)
+                    
+                    self.fighterImage.image = imageToCache
+                    
+//                    self.fighterImage.image = UIImage(data: data)
                 }
             })
             task.resume()
