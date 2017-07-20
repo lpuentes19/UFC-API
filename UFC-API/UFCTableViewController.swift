@@ -15,7 +15,7 @@ class UFCTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchFighter { (_) in
-            DispatchQueue.main.async {
+            DispatchQueue.main.sync {
                 self.tableView.reloadData()
             }
         }
@@ -35,6 +35,19 @@ class UFCTableViewController: UITableViewController {
         
         return cell
     }
+    
+//    func sortFighters() {
+//        fetchFighter { (fighters) in
+//            let sortedFighters = fighters?.sorted {
+//                guard let wins0 = $0.0.wins,
+//                    let wins1 = $0.1.wins,
+//                    let losses0 = $0.0.losses,
+//                    let losses1 = $0.1.losses else {return false}
+//                return wins0 / losses0 + 1 > wins1 / losses1 + 1
+//            }
+//            self.fightersArray = sortedFighters!
+//        }
+//    }
     
     func fetchFighter(completion: @escaping ([UFCFighter]?) -> Void) {
         guard let url = URL(string: "http://ufc-data-api.ufc.com/api/v1/us/fighters") else { return }
@@ -60,7 +73,7 @@ class UFCTableViewController: UITableViewController {
                         fighters.losses = dictionary["losses"] as? Int
                         fighters.imageURL = dictionary["thumbnail"] as? String
                         self.fightersArray.append(fighters)
-                        completion(self.fightersArray)                        
+                        completion(self.fightersArray)
                     }
                     
                 } catch {

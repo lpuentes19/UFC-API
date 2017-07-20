@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95E3FB9A1F214E3E00A0D5CF /* UFCLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E3FB991F214E3E00A0D5CF /* UFCLaunchScreenViewController.swift */; };
+		95E3FB9F1F21531A00A0D5CF /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E3FB9E1F21531A00A0D5CF /* UIView+Animation.swift */; };
 		95EC88431F1E83E3006530FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC88421F1E83E3006530FD /* AppDelegate.swift */; };
 		95EC88481F1E83E3006530FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EC88461F1E83E3006530FD /* Main.storyboard */; };
 		95EC884A1F1E83E3006530FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EC88491F1E83E3006530FD /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95E3FB991F214E3E00A0D5CF /* UFCLaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UFCLaunchScreenViewController.swift; sourceTree = "<group>"; };
+		95E3FB9E1F21531A00A0D5CF /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		95EC883F1F1E83E3006530FD /* UFC-API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UFC-API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EC88421F1E83E3006530FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EC88471F1E83E3006530FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95E3FB9B1F214E6900A0D5CF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95EC88551F1E9292006530FD /* UFCTableViewController.swift */,
+				95E3FB991F214E3E00A0D5CF /* UFCLaunchScreenViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		95E3FB9C1F214E7D00A0D5CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95EC88571F1E94F6006530FD /* UFCFighter.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		95E3FB9D1F214E8600A0D5CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95EC885B1F1EF670006530FD /* UFCFighterTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		95E3FBA01F21536700A0D5CF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				95E3FB9E1F21531A00A0D5CF /* UIView+Animation.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		95EC88361F1E83E3006530FD = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				95EC88461F1E83E3006530FD /* Main.storyboard */,
-				95EC88551F1E9292006530FD /* UFCTableViewController.swift */,
-				95EC88571F1E94F6006530FD /* UFCFighter.swift */,
-				95EC885B1F1EF670006530FD /* UFCFighterTableViewCell.swift */,
+				95E3FB9B1F214E6900A0D5CF /* ViewControllers */,
+				95E3FB9C1F214E7D00A0D5CF /* Models */,
+				95E3FB9D1F214E8600A0D5CF /* Views */,
+				95E3FBA01F21536700A0D5CF /* Extension */,
 				95EC88541F1E83FD006530FD /* Resources */,
 			);
 			path = "UFC-API";
@@ -154,7 +192,9 @@
 				95EC88561F1E9292006530FD /* UFCTableViewController.swift in Sources */,
 				95EC88581F1E94F6006530FD /* UFCFighter.swift in Sources */,
 				95EC885C1F1EF670006530FD /* UFCFighterTableViewCell.swift in Sources */,
+				95E3FB9A1F214E3E00A0D5CF /* UFCLaunchScreenViewController.swift in Sources */,
 				95EC88431F1E83E3006530FD /* AppDelegate.swift in Sources */,
+				95E3FB9F1F21531A00A0D5CF /* UIView+Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

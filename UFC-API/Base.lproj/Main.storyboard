@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YsN-VN-2AM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NsK-0f-Tyc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -100,10 +100,42 @@
             </objects>
             <point key="canvasLocation" x="1080.8" y="177.66116941529236"/>
         </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="zQp-xH-YFM">
+            <objects>
+                <viewController id="NsK-0f-Tyc" customClass="UFCLaunchScreenViewController" customModule="UFC_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ygF-XP-lXN"/>
+                        <viewControllerLayoutGuide type="bottom" id="JPq-I0-hkG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UGm-OJ-Y09">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ufc2" translatesAutoresizingMaskIntoConstraints="NO" id="W9g-9l-rfK">
+                                <rect key="frame" x="0.0" y="155" width="375" height="356"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="W9g-9l-rfK" secondAttribute="trailing" id="30I-7v-E96"/>
+                            <constraint firstItem="JPq-I0-hkG" firstAttribute="top" secondItem="W9g-9l-rfK" secondAttribute="bottom" constant="156" id="ONZ-rY-xSe"/>
+                            <constraint firstItem="W9g-9l-rfK" firstAttribute="top" secondItem="ygF-XP-lXN" secondAttribute="bottom" constant="135" id="ovK-eB-0I9"/>
+                            <constraint firstItem="W9g-9l-rfK" firstAttribute="leading" secondItem="UGm-OJ-Y09" secondAttribute="leading" id="qH3-mU-fjw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ufcImage" destination="W9g-9l-rfK" id="V3a-21-II9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S35-02-mCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-722.39999999999998" y="177.66116941529236"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="SJ0-BA-eis">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YsN-VN-2AM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="launchMainScreen" automaticallyAdjustsScrollViewInsets="NO" id="YsN-VN-2AM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vbl-uW-SkS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -119,4 +151,7 @@
             <point key="canvasLocation" x="141.59999999999999" y="177.66116941529236"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ufc2" width="594" height="334"/>
+    </resources>
 </document>

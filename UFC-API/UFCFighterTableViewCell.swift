@@ -32,9 +32,9 @@ class UFCFighterTableViewCell: UITableViewCell {
                 if error != nil {
                     print(error!.localizedDescription)
                 }
-                
+                guard let data = data else { return }
                 DispatchQueue.main.async {
-                    self.fighterImage.image = UIImage(data: data!)
+                    self.fighterImage.image = UIImage(data: data)
                 }
             })
             task.resume()
