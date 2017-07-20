@@ -8,6 +8,7 @@
 * REST API
 * UIView Animation
 * UIStatusBarStyle
+* NSCache
 
 ### Features
 * Customized table view cell that displays labels and an image that are all embedded within stack views.
